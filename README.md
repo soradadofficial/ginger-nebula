@@ -18,27 +18,6 @@
 9. [คำถามที่พบบ่อย (FAQ)](#คำถามที่พบบ่อย-faq)
 10. [ติดต่อทีมงาน](#ติดต่อทีมงาน)
 
----
-
-## EA คืออะไร?
-
-**Ginger Nebula Quantum Grid** คือ Expert Advisor (EA) สำหรับ MetaTrader 5 (MT5) ที่ใช้กลยุทธ์ **Grid + Stochastic Oscillator** ในการเปิดออเดอร์อัตโนมัติ
-
-### 🎯 หลักการทำงาน
-
-```
-1. EA ใช้ Stochastic Oscillator ในการหา "จังหวะเข้า" เทรดครั้งแรก
-   - BUY  → เมื่อ Stochastic ตัดขึ้นจากโซน Oversold (ต่ำกว่า 20)
-   - SELL → เมื่อ Stochastic ตัดลงจากโซน Overbought (สูงกว่า 80)
-
-2. หลังจากเปิดไม้แรกแล้ว ถ้าราคาวิ่งสวนทาง
-   → EA จะเปิด Grid เพิ่มตามระยะที่กำหนด (InpGridStep)
-   → ล็อตจะคูณขึ้นตาม Martingale Multiplier
-
-3. เมื่อกำไรรวมถึงเป้าหมาย (InpTargetProfit)
-   → EA จะปิดออเดอร์ทั้งหมดพร้อมกัน (Basket Close)
-   → เริ่มรอบใหม่
-```
 
 ---
 
